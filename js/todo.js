@@ -18,8 +18,13 @@ $("input[type='text']").keypress(function(event){
 	if(event.which === 13){
 		//grabbing new todo text from input
 		var todoText = $(this).val();
-		$(this).val("");
-		//create a new li and add to ul
-		$("ul.todo-list").append("<li class='todo-item'> " + todoText + "</li>")
+		if($(this).val()==""){
+			alert("Enter a valid ToDo!");
+		}
+		else{
+			$(this).val("");
+			//create a new li and add to ul
+			$("ul.todo-list").append("<li class='todo-item'> " + todoText + "</li>")
+		}
 	}
 });
