@@ -11,7 +11,7 @@ $("input[type='text']").keypress(function(event){
 		}
 		else{
 			$(this).val("");
-			$("div.board").append("<div class='board-item'>" + boardText + "<span class='icon-edit'><i class='fas fa-edit fa-sm'></i></span></div>")
+			$("div.board").append("<div class='board-item'>" + boardText + "<a href='todo.html'><span class='icon-edit'><i class='fas fa-edit fa-sm'></i></span></a></div>")
 		}
 	}
 
